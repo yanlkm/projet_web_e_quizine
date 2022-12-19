@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>10</x>
+      <y>40</y>
+      <w>210</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>T_pro_profil
+--
+_idcompte:int(3)_
+pro_nom:varchar(25)
+pro_prenom:varchar(25)
+pro_datecreation:date
+pro_validite:char(1)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>30</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>T_act_actualite
+--
+_idactuctualite:number(4)_
+act_intitule:varchar(25)
+act_texte:varchar(300)
+act_date:datetime
+act_extension:varchar(25)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>820</x>
+      <y>270</y>
+      <w>220</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>T_mat_match
+--
+_idmatch:int(4)_
+mat_activation:char(1)
+mat_intitule:varchar(25)
+mat_datedebut:datetime
+mat_datefin:datetime
+mat_visibilite:char(1)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>210</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>T_rep_reponse
+--
+_idreponse:int(1)_
+rep_libelle:varchar(100)
+rep_valide:char(1)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>410</x>
+      <y>460</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>T_qui_quiz
+--
+_idquiz:int(4)_
+qui_intitutle:varchar(25)
+qui_image:varchar(50)
+qui_validite: char(1)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>70</y>
+      <w>150</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=1..1
+&lt; possède un </panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>110</y>
+      <w>250</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1..1
+ publie &gt;</panel_attributes>
+    <additional_attributes>230.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>150</y>
+      <w>70</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=0..*
+crée &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1230</x>
+      <y>220</y>
+      <w>170</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>T_jou_joeur
+--
+_idjoueur:int(3)_
+jou_pseudo:varchar(25)
+jou_score :int
+jou_datedebut:datetime
+jou_datefin:datetime</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1030</x>
+      <y>310</y>
+      <w>220</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=1..*
+&lt; participe</panel_attributes>
+    <additional_attributes>10.0;20.0;200.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>150</y>
+      <w>300</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=0..*
+lance &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;280.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>490</y>
+      <w>230</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..*
+m2=1..1
+&lt; EstComposéDe</panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>450</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>T_que_question
+--
+_idquestion:int(2)_
+que_texte:varchar(200)
+que_ordre:number(2)
+que_etat: char(1)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>90</x>
+      <y>280</y>
+      <w>90</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=2..4
+m2=1..1
+contient &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>610</x>
+      <y>390</y>
+      <w>230</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=1..*
+commence &gt;</panel_attributes>
+    <additional_attributes>10.0;110.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>60</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>T_com_compte
+--
+_idcompte:int(3)_
+com_mdp:char(64)
+com_pseudo: varchar(20)</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
